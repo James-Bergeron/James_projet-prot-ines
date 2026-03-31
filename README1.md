@@ -4,3 +4,5 @@ Mon projet est basé sur le concept de l'épicerie où le personnage doit ramass
 
 
 # But
+
+Le but de l'épicerie est de ramasser 1275 grammes de protéines de différentes sources afin d'en avoir assez pour une semaine complète.
