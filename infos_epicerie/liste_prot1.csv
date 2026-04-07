@@ -1,0 +1,9 @@
+﻿ID;Nom de protéines;Nb de grammes en moyenne de prot pour 100g de l'aliment;Prix unitaire en moyenne $ (100g);Qté réel de l'aliment;Qté par semaine;Qté prot par semaine;Prix par semaine;Qté aliment;Protéine totale(g);Prix des articles avec taxes en unité;Prix des articles réels avec taxes;Prix total($)
+1;Poulet;31,5;1,6;demi poitrine poulet complet;7;220,5;11,2;7 poitrines de poulet;1283;12.23;28,13;188,97
+2;Porc;26;1,5;1 filet de porc;3;78;4,5;3 filets;;9.11;27,32;
+3;Bœuf haché mi-maigre;23;2;1/2 tasse cuit;7;161;14;3 1/2 tasses de bœuf;;25.98;29,87;
+4;Œufs;12;0,5;2 œufs;7;84;3,5;14 œufs;;7.12;7,12;
+5;Lait Natrel 2% en carton;3,3;0,25;100 mL;60;198;15;6 litres de lait;;5.74;17,21;
+6;Amandes;21;1,5;3/4 de tasse;2;42;3;1 1/2 de tasse d'amandes;;20.7;20,7;
+7;Dinde hachée;27;1,75;1/2 tasse cuit;6;162;10,5;3 tasses de dinde;;7.47;14,94;
+8;Whey protein (Mutant triple chocolat);75;2,5;3 scoops;4,5;337,5;11,25;14 scoops;;43.68;43,68;
