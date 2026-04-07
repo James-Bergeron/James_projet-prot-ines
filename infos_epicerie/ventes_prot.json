@@ -1,0 +1,34 @@
+[
+    {
+        "id_produit": 1,
+        "qte_article": 2
+    },
+    {
+        "id_produit": 2,
+        "qte_article": 3
+    },
+    {
+        "id_produit": 3,
+        "qte_article": 1
+    },
+    {
+        "id_produit": 4,
+        "qte_article": 1
+    },
+    {
+        "id_produit": 5,
+        "qte_article": 3
+    },
+    {
+        "id_produit": 6,
+        "qte_article": 1
+    },
+    {
+        "id_produit": 7,
+        "qte_article": 2
+    },
+    {
+        "id_produit": 8,
+        "qte_article": 1
+    }
+]
