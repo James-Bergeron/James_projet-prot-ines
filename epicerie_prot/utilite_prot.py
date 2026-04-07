@@ -21,11 +21,11 @@ def lire_liste_prot1(chemin_fichier):
     dict: dictionnaire des produits indexés par ID
     """
     try:
-        df = pd.read_csv(chemin_fichier)
+        df = pd.read_csv(chemin_fichier, sep=";", decimal=",")
         produits = {}
 
         for _, row in df.iterrows():
-            produits[row["ID"]] = {
+            produits[int(row["ID"])] = {
                 "Nom de protéines": row["Nom de protéines"],
                 "Nb de grammes en moyenne de prot pour 100g de l'aliment": row["Nb de grammes en moyenne de prot pour 100g de l'aliment"],
                 "Qté prot par semaine": row["Qté prot par semaine"],
@@ -67,7 +67,7 @@ def lire_ventes_prot(chemin_fichier):
         return []
 
 
-def generer_facture(produits, ventes, chemin_sortie):
+def generer_facture(produits, ventes, infos_sortie):
     """
     Génère un fichier de facture basé sur les ventes.
 
@@ -78,32 +78,39 @@ def generer_facture(produits, ventes, chemin_sortie):
     """
     try:
         total_revenu = 0
+        total_proteines = 0
         lignes = []
 
         for vente in ventes:
-            pid = vente["id_produit"]
-            qte_article = vente["qte_article"]
+            pid = int(vente["id_produit"])
+            qte_article = int(vente["qte_article"])
 
             if pid in produits:
                 produit = produits[pid]
-                revenu = produit["Prix des articles avec taxes en unité"] * qte_article
-                proteines_total = produit["Qté prot par semaine"] * qte_article
+                revenu = float(produit["Prix des articles avec taxes en unité"]) * qte_article
+                proteines_total = float(produit["Qté prot par semaine"]) * qte_article
 
                 total_revenu += revenu
+                total_proteines += proteines_total
 
                 lignes.append(
-                    f"{produit['Nom de protéines']} - Qté: {qte_article} - Revenu: {revenu:.2f}$ - Protéines: {proteines_total}g"
+                    f"{produit['Nom de protéines']} - Qté: {qte_article} - Revenu: {revenu:.2f}$ - Protéines par semaine: {proteines_total}g"
                 )
 
         # Créer dossier si nécessaire
-        os.makedirs(os.path.dirname(chemin_sortie), exist_ok=True)
+        os.makedirs(os.path.dirname(infos_sortie), exist_ok=True)
 
-        with open(chemin_sortie, "w", encoding="utf-8") as f:
-            f.write("=== Rapport des ventes ===\n\n")
+        with open(infos_sortie, "w", encoding="utf-8") as f:
+            f.write("=== Facture d'épicerie de protéines ===\n\n")
             for ligne in lignes:
                 f.write(ligne + "\n")
 
-            f.write(f"\nTotal revenu: {total_revenu:.2f}$")
+            f.write(f"\nTotal revenu: {total_revenu:.2f}$\n")
+            f.write(f"Total protéines: {total_proteines:.2f} g\n\n")
+
+            f.write("Budget de 190$ dépassé!" if total_revenu > 190 else "Budget de 190$ respecté!")
+            f.write("\nProtéines totales inférieures à 2000g!" if total_proteines < 2000 else "Protéines totales respectées!")
+            f.write("\n\nMerci d'avoir utilisé notre service d'épicerie de protéines !")
 
     except Exception as e:
         print(f"Erreur lors de l'écriture du rapport: {e}")
