@@ -1,0 +1,12 @@
+=== Rapport des ventes ===
+
+Poulet - Qté: 2 - Revenu: 24.46$ - Protéines: 441.0g
+Porc - Qté: 3 - Revenu: 27.33$ - Protéines: 234.0g
+Bœuf haché mi-maigre - Qté: 1 - Revenu: 25.98$ - Protéines: 161.0g
+Œufs - Qté: 1 - Revenu: 7.12$ - Protéines: 84.0g
+Lait Natrel 2% en carton - Qté: 3 - Revenu: 17.22$ - Protéines: 594.0g
+Amandes - Qté: 1 - Revenu: 20.70$ - Protéines: 42.0g
+Dinde hachée - Qté: 2 - Revenu: 14.94$ - Protéines: 324.0g
+Whey protein (Mutant triple chocolat) - Qté: 1 - Revenu: 43.68$ - Protéines: 337.5g
+
+Total revenu: 181.43$

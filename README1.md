@@ -5,7 +5,7 @@ Mon projet est basé sur le concept de l'épicerie où le personnage doit ramass
 
 # But
 
-Le but de l'épicerie est de ramasser 1275 grammes de protéines de différentes sources afin d'en avoir assez pour une semaine complète.
+Le but de l'épicerie est de ramasser 2000 grammes de protéines de différentes sources afin d'en avoir assez pour une semaine complète.
 
 # Fonctionnement de chaque partie
 
@@ -19,4 +19,4 @@ Le but de l'épicerie est de ramasser 1275 grammes de protéines de différentes
 
 - facture.txt: C'est le fichier texte est la sortie où la facture de l'épicerie va être générée, à la fin de l'exécution du code.
 
-- obligations.txt: C'est le fichier qui présente des contraintes pour l'épicerie de protéines afin d'avoir assez de de grammes de protéines pour la semaine.
+- obligations.txt: C'est le fichier qui présente des contraintes pour l'épicerie de protéines afin d'avoir assez de de grammes de protéines pour la semaine.(cette partie est dans la facture)
